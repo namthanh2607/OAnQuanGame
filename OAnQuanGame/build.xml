@@ -1,0 +1,10 @@
+<project name="OAnQuanGame" default="run" basedir=".">
+  <target name="compile">
+    <mkdir dir="bin"/>
+    <javac srcdir="src" destdir="bin" encoding="UTF-8" includeantruntime="false"/>
+  </target>
+  <target name="run" depends="compile">
+    <java classname="vn.edu.oanquan.Main" classpath="bin" fork="true"/>
+  </target>
+  <target name="clean"><delete dir="bin"/></target>
+</project>
